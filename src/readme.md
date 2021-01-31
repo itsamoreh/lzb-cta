@@ -1,4 +1,4 @@
-# Lazy Blocks: CONTROL_LABEL Control
+# Lazy Blocks: CTA Button Control
 
 * Contributors: AUTHOR_NAME
 * Tags: PLUGIN_TAGS

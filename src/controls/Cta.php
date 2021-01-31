@@ -1,27 +1,27 @@
 <?php
 /**
- * CONTROL_LABEL Control.
+ * CTA Button Control.
  *
- * @package lzb-CONTROL-NAME
+ * @package lzb-Cta
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if ( ! class_exists( 'NAMESPACE_Lzb_Control_CONTROL_NAME' ) ) :
+if ( ! class_exists( 'NAMESPACE_Lzb_Control_Cta' ) ) :
     /**
-     * NAMESPACE_Lzb_Control_CONTROL_NAME class.
+     * NAMESPACE_Lzb_Control_Cta class.
      *
      * LazyBlocks_Control - https://github.com/nk-o/lazy-blocks/blob/master/src/controls/_base/index.php
      */
-    class NAMESPACE_Lzb_Control_CONTROL_NAME extends LazyBlocks_Control {
+    class NAMESPACE_Lzb_Control_Cta extends LazyBlocks_Control {
         /**
          * Constructor
          */
         public function __construct() {
             // Control unique name.
-            $this->name = 'CONTROL_NAME';
+            $this->name = 'Cta';
 
             // Control icon SVG.
             // You may use these icons https://material.io/resources/icons/?icon=accessibility&style=outline .
@@ -31,7 +31,7 @@ if ( ! class_exists( 'NAMESPACE_Lzb_Control_CONTROL_NAME' ) ) :
             $this->type = 'string';
 
             // Control label.
-            $this->label = __( 'CONTROL_LABEL', 'TEXTDOMAIN' );
+            $this->label = __( 'CTA Button', 'TEXTDOMAIN' );
 
             // Category name [basic, content, choice, advanced, layout]
             // How to add custom category - https://lazyblocks.com/documentation/php-filters/lzb-controls-categories/
@@ -46,7 +46,7 @@ if ( ! class_exists( 'NAMESPACE_Lzb_Control_CONTROL_NAME' ) ) :
 
             // Optional additional attributes, that will be saved in control data.
             $this->attributes = array(
-                'CONTROL_NAME_custom_attribute' => 'default_value',
+                'Cta_custom_attribute' => 'default_value',
             );
 
             parent::__construct();
@@ -57,15 +57,15 @@ if ( ! class_exists( 'NAMESPACE_Lzb_Control_CONTROL_NAME' ) ) :
          */
         public function register_assets() {
             wp_register_script(
-                'NAMESPACE-lzb-control-CONTROL_NAME',
-                NAMESPACE_Lzb_Plugin_CONTROL_NAME::$plugin_url . 'assets/js/CONTROL-NAME.min.js',
+                'NAMESPACE-lzb-control-Cta',
+                NAMESPACE_Lzb_Plugin_Cta::$plugin_url . 'assets/js/Cta.min.js',
                 array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-components' ),
                 '1.0.0',
                 true
             );
             wp_register_style(
-                'NAMESPACE-lzb-control-CONTROL_NAME',
-                NAMESPACE_Lzb_Plugin_CONTROL_NAME::$plugin_url . 'assets/css/CONTROL-NAME.min.css',
+                'NAMESPACE-lzb-control-Cta',
+                NAMESPACE_Lzb_Plugin_Cta::$plugin_url . 'assets/css/Cta.min.css',
                 array(),
                 '1.0.0'
             );
@@ -77,7 +77,7 @@ if ( ! class_exists( 'NAMESPACE_Lzb_Control_CONTROL_NAME' ) ) :
          * @return array script dependencies.
          */
         public function get_script_depends() {
-            return array( 'NAMESPACE-lzb-control-CONTROL_NAME' );
+            return array( 'NAMESPACE-lzb-control-Cta' );
         }
 
         /**
@@ -86,10 +86,10 @@ if ( ! class_exists( 'NAMESPACE_Lzb_Control_CONTROL_NAME' ) ) :
          * @return array style dependencies.
          */
         public function get_style_depends() {
-            return array( 'NAMESPACE-lzb-control-CONTROL_NAME' );
+            return array( 'NAMESPACE-lzb-control-Cta' );
         }
     }
 
     // Init.
-    new NAMESPACE_Lzb_Control_CONTROL_NAME();
+    new NAMESPACE_Lzb_Control_Cta();
 endif;

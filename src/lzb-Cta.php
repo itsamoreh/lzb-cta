@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name:  Lazy Blocks: CONTROL_LABEL Control
+ * Plugin Name:  Lazy Blocks: CTA Button Control
  * Description:  SHORT_DESCRIPTION
  * Plugin URI:   PLUGIN_URL
  * Version:      1.0.0
- * Author:       AUTHOR_NAME
- * Author URI:   AUTHOR_URL
+ * Author:       Amor Kumar
+ * Author URI:   https://amorkumar.com
  * License:      GPLv2 or later
  * License URI:  https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:  TEXTDOMAIN
  *
- * @package lzb-CONTROL-NAME
+ * @package lzb-Cta
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -18,9 +18,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * NAMESPACE_Lzb_Plugin_CONTROL_NAME Class
+ * NAMESPACE_Lzb_Plugin_Cta Class
  */
-class NAMESPACE_Lzb_Plugin_CONTROL_NAME {
+class NAMESPACE_Lzb_Plugin_Cta {
 
     /**
      * Plugin Path.
@@ -37,7 +37,7 @@ class NAMESPACE_Lzb_Plugin_CONTROL_NAME {
     public static $plugin_url;
 
     /**
-     * NAMESPACE_Lzb_Plugin_CONTROL_NAME constructor.
+     * NAMESPACE_Lzb_Plugin_Cta constructor.
      */
     public function __construct() {}
 
@@ -45,7 +45,7 @@ class NAMESPACE_Lzb_Plugin_CONTROL_NAME {
      * Init.
      */
     public static function init() {
-        add_action( 'init', array( 'NAMESPACE_Lzb_Plugin_CONTROL_NAME', 'plugins_loaded' ), 11 );
+        add_action( 'init', array( 'NAMESPACE_Lzb_Plugin_Cta', 'plugins_loaded' ), 11 );
     }
 
     /**
@@ -63,8 +63,8 @@ class NAMESPACE_Lzb_Plugin_CONTROL_NAME {
         load_plugin_textdomain( 'TEXTDOMAIN', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
         // Include control.
-        include_once self::$plugin_path . '/controls/CONTROL-NAME.php';
+        include_once self::$plugin_path . '/controls/Cta.php';
     }
 }
 
-NAMESPACE_Lzb_Plugin_CONTROL_NAME::init();
+NAMESPACE_Lzb_Plugin_Cta::init();
